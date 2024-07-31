@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'Katuri';
+    src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.btn {
+    width: 80px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+    cursor: pointer;
+    margin: 0 40px;
+    font-size: 20px;
+
+    &:hover {
+        border-radius: 20px;
+        box-shadow: 0 0 5px #64DFDF, 0 0 10px #56CFE1, 0 0 15px #48BFE3;
+        transition-duration: 1s;
+    }
+}
+
+body {
+    font-family: 'omyu_pretty';
+    text-align: center;
+    /* width: 100vw; */
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar-container {
+    width: 1000px;
+    margin: 70px auto;
+    border: 2px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    background-color: #f2fffb;
+    border-radius: 20px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+    font-size: 25px;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    /* 
+    grid-template-columns : CSS의 Grid 레이아웃에서 사용되는 속성(property) 중 하나로, 
+    그리드 컨테이너(grid container)의 열(column) 크기를 지정하는 것을 말한다.
+    repeat(7, 1fr) : 1행에 7개의 열이 있으며, 
+    각 열의 크기를 동일하게 1분의 1(fractional unit, fr)로 설정하라는 의미한다. */
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 15px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.day {
+    width: 140px;
+    padding-left: 20px;
+}
+
+.calendar-dates {
+    padding-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 15px;
+    text-align: left;
+}
+
+.date {
+    font-size: 18px;
+    height: 100px;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.date:hover {
+    border-radius: 10px;
+    box-shadow: 0 0 5px #64DFDF, 0 0 10px #56CFE1, 0 0 15px #48BFE3;
+    transition-duration: 1s;
+}
