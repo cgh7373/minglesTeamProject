@@ -24,7 +24,8 @@ html {
 }
 
 #wrapper {
-    background-image: url(resources/images/Untitled\ \(3\).png);
+    background-image: url(resources/images/bgi1.png);
+    /* background-image: url(resources/images/Untitled\ \(3\).png); */
     /* background-image: url(resources/images/573832045864709.jpg); */
     width: 100vw;
     height: 300vh;
