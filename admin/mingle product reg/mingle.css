@@ -1,0 +1,305 @@
+a,
+div,
+img {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #222222;
+}
+
+a:hover {
+    color: #64DFDF;
+    text-decoration: none;
+}
+/* 버튼 */
+.btn {
+    width:200px;
+    height:30px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    transition: all 1s;
+    cursor:pointer;
+}
+.btn:hover {
+    border-radius:20px;
+    box-shadow: 0 0 5px #64DFDF, 0 0 10px #56CFE1, 0 0 15px #48BFE3;
+    transition-duration:1s;
+}
+
+/* 전체 랩 스타일 */
+#wrap {
+    width: 99vw;
+    height: 99.5vh;
+    border: 3px solid #07BEB8;
+    border-radius: 20px;
+    background-color: #80FFDB;
+    margin: auto;
+    position: relative;
+    display: flex;
+}
+
+/* 메인 컨테이너 스타일 */
+#container {
+    width: 94%;
+    height: 95%;
+    background-color: rgba(10, 10, 10, .5);
+    border: 1px solid #64DFDF;
+    border-radius: 20px;
+    position: absolute;
+    top: 2.5%;
+    left: 1.5%;
+}
+
+/* 홈키 스타일 */
+#homeKey {
+    width: 3%;
+    height: 6%;
+    position: absolute;
+    left: 96.3%;
+    top: 50%;
+    cursor: pointer;
+    border: 2px outset #07BEB8;
+    box-shadow: 0 0 2px 1px #08817d;
+}
+
+/* 메뉴바 스타일 */
+#menuBar {
+    width: 20%;
+    height: 100%;
+    border-radius: 20px;
+    border: 3px solid #07BEB8;
+    box-shadow: 0 0 1px 1px #07BEB8;
+    right: 0;
+    position: absolute;
+    background-color: white;
+    display: none;
+}
+
+/* 메뉴 랩 스타일 */
+#menuWrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* 메뉴 헤드 스타일 */
+#mHead {
+    position: absolute;
+    left: 24%;
+    width: 54%;
+    height: 10%;
+    border-bottom: 2px solid #07BEB8;
+}
+
+/* 메뉴 바디 스타일 */
+#mBody {
+    top: 20%;
+    position: absolute;
+}
+
+#mBody .material-icons {
+    margin: 50px;
+}
+
+#mBody .material-icons a {
+    margin: 5px;
+}
+
+.menu-button {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border: none;
+}
+
+.menu-image {
+    background-color: white;
+    width: 70%;
+    height: 70%;
+}
+
+.menu-logo {
+    width: 90%;
+    height: 90%;
+}
+
+#container .containerWrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container .containerWrap .addProduct {
+    width: 700px;
+    height: 700px;
+    box-shadow: 1px 1px 5px 0 #455c71;
+    background-color: #2dbbb6;
+    border-radius: 10px;
+}
+
+#container .containerWrap .addProduct h2 {
+    font-weight: 700;
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+#container .containerWrap .addProduct #productImage {
+    width: 350px;
+    height: 350px;
+    border: 1px solid #777;
+    margin: 20px 0 10px 10px;
+}
+
+.input-file-button {
+    margin: 30px 0 0 20px;
+    /* margin-left: 20px; */
+    padding: 6px 25px;
+    background-color: #FF6600;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+.addProduct {
+    padding: 10px;
+}
+
+.addProduct img {
+    width: 350px;
+    height: 350px;
+}
+
+.addProduct form {
+    position: relative;
+}
+
+.form {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 600px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+}
+
+
+.addProduct .form #itemName {
+    width: 260px;
+    margin: 5px 0 10px;
+}
+
+.addProduct .form #itemDes {
+    resize: none;
+    width: 260px;
+    height: 100px;
+    margin: 5px 0 10px;
+}
+
+.addProduct .form #itemPrice {
+    width: 260px;
+    margin: 5px 0 20px;
+}
+.submit {
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    bottom: -180px;
+    left: 280px;
+    border-radius: 10px;
+}
+
+/* select */
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    font-family: Arial;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: DodgerBlue;
+
+}
+
+.custom-select select {
+    display: none;
+    /*hide original SELECT element: */
+}
+
+.select-selected {
+    background-color: rgb(26, 117, 113);
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: rgb(26, 117, 113);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.same-as-selected,
+.select-items div:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/* 태그 */
+.detailCategory{
+    margin-top: 60px;
+    width: 300px;
+    height: 150px;
+    display: none;
+}
+
+.detailCategory input{
+    width: 300px;
+    height: 150px;
+}
+
+.openTag {
+    margin-top: 60px;
+    color: rgb(26, 117, 113);
+}
+
