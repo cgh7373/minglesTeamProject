@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mingles Frame</title>
+
+        <!-- 외부파일 -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- icon -->
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+        <!-- toastUi editor cdn -->
+        <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+        <!-- Editor's Style -->
+        <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+
+        <link rel="stylesheet" href="https://uicdn.toast.com/tui-color-picker/latest/tui-color-picker.min.css" />
+        <link rel="stylesheet" href="https://uicdn.toast.com/editor-plugin-color-syntax/latest/toastui-editor-plugin-color-syntax.min.css"/>
+
+        <!-- Color Picker -->
+        <script src="https://uicdn.toast.com/tui-color-picker/latest/tui-color-picker.min.js"></script>
+        <!-- Editor's Plugin -->
+        <script src="https://uicdn.toast.com/editor-plugin-color-syntax/latest/toastui-editor-plugin-color-syntax.min.js"></script>
+
+        <!-- reset -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
+            rel="stylesheet">
+        <!-- 내부파일 -->
+        <link rel="stylesheet" href="mingle.css">
+        <script src="mingle.js" defer></script>
+        <script src="modal.js" defer></script>
+        <script src="resources/jQuery/jquery-3.7.1.min.js"></script>
+        <link rel="icon" href="resources/images/Mingles아이콘-removebg-preview.png">
+
+    </head>
+
+    <body>
+
+        <div id="wrap">
+
+            <!-- 메인 화면 -->
+            <div id="container">
+                <div class="post-list" id="right">
+                    <div id="post-right__title">
+                        <div id="right-title__text">게시글 관리</div>
+                        <div id="right-title__btn">
+                            <button class="btn-set" id="b1">
+                                <span>게시글 삭제</span></button>
+                            <button class="btn-set" id="b2">
+                                <span>블랙리스트</span></button>
+                            <button class="btn-set" id="b3">
+                                <span onclick="openChat()">메세지 보내기</span>
+                            </button>
+                            <button class="btn-set" id="modalOpenButton" data-toggle="modal" data-target="#noticeModal">
+                                <span id="">공지사항 작성</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="post-right__list">
+                        <section class="right-list__content">
+                            <ul>
+                                <li>내용1</li>
+                                <li>내용2</li>
+                                <li>내용3</li>
+                                <li>내용4</li>
+                                <li>내용5</li>
+                                <li>내용6</li>
+                                <li>내용7</li>
+                            </ul>
+                            <ul>
+                                <input type="checkbox" class="list__check" id="ch1">
+                                <li>내용1</li>
+                                <li>내용2</li>
+                                <li>내용3</li>
+                                <li>내용4</li>
+                                <li>내용5</li>
+                                <li>내용6</li>
+                                <li>내용7</li>
+                            </ul>
+                            <ul>
+                                <input type="checkbox" class="list__check" id="ch2">
+                                <li>내용1</li>
+                                <li>내용2</li>
+                                <li>내용3</li>
+                                <li>내용4</li>
+                                <li>내용5</li>
+                                <li>내용6</li>
+                                <li>내용7</li>
+                            </ul>
+                            <ul>
+                                <input type="checkbox" class="list__check" id="ch3">
+                                <li>내용1</li>
+                                <li>내용2</li>
+                                <li>내용3</li>
+                                <li>내용4</li>
+                                <li>내용5</li>
+                                <li>내용6</li>
+                                <li>내용7</li>
+                            </ul>
+                            <ul>
+                                <input type="checkbox" class="list__check" id="ch4">
+                                <li>내용1</li>
+                                <li>내용2</li>
+                                <li>내용3</li>
+                                <li>내용4</li>
+                                <li>내용5</li>
+                                <li>내용6</li>
+                                <li>내용7</li>
+                            </ul>
+                            <ul>
+                                <input type="checkbox" class="list__check" id="ch5">
+                                <li>내용1</li>
+                                <li>내용2</li>
+                                <li>내용3</li>
+                                <li>내용4</li>
+                                <li>내용5</li>
+                                <li>내용6</li>
+                                <li>내용7</li>
+                            </ul>
+                            <ul>
+                                <input type="checkbox" class="list__check" id="ch6">
+                                <li>내용1</li>
+                                <li>내용2</li>
+                                <li>내용3</li>
+                                <li>내용4</li>
+                                <li>내용5</li>
+                                <li>내용6</li>
+                                <li>내용7</li>
+                            </ul>
+                            <ul>
+                                <input type="checkbox" class="list__check" id="ch7">
+                                <li>내용1</li>
+                                <li>내용2</li>
+                                <li>내용3</li>
+                                <li>내용4</li>
+                                <li>내용5</li>
+                                <li>내용6</li>
+                                <li>내용7</li>
+                            </ul>
+                            <ul>
+                                <input type="checkbox" class="list__check" id="ch8">
+                                <li>내용1</li>
+                                <li>내용2</li>
+                                <li>내용3</li>
+                                <li>내용4</li>
+                                <li>내용5</li>
+                                <li>내용6</li>
+                                <li>내용7</li>
+                            </ul>
+                            <ul>
+                                <input type="checkbox" class="list__check" id="ch9">
+                                <li>내용1</li>
+                                <li>내용2</li>
+                                <li>내용3</li>
+                                <li>내용4</li>
+                                <li>내용5</li>
+                                <li>내용6</li>
+                                <li>내용7</li>
+                            </ul>
+                            <ul>
+                                <input type="checkbox" class="list__check" id="ch10">
+                                <li>내용1</li>
+                                <li>내용2</li>
+                                <li>내용3</li>
+                                <li>내용4</li>
+                                <li>내용5</li>
+                                <li>내용6</li>
+                                <li>내용7</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal" id="noticeModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form action="">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">공지사항 작성</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div id="content"></div>
+                            </div>
+                            
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                            
+                                <div id="sub">
+                                    <button class="btn-1">임시 저장</button>
+                                    <button class="btn-1" id="modalCloseButton">작성 취소</button>
+                                    <input class="btn-1" id="notice-enroll" type="button" value="작성 완료">
+                                </div>
+                                <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+
+            <!-- 홈키 -->
+            <button id="homeKey" class="rounded-circle"></button>
+
+            <!-- 메뉴바 -->
+            <div id="menuBar">
+
+                <div id="menuWrap">
+
+                    <!-- 뒤로가기버튼 -->
+                    <button
+                        id="menuBack"
+                        class="rounded-circle"
+                        style="width: 70px; height: 70px; background-color: white; border: none;">
+                        <img
+                            src="resources/images/greenpointer.png"
+                            style="background-color: white; width: 70%; height: 70%;">
+                        <!-- 화살표 이미지(->)로 변경, deg(270 제거) -->
+                    </button>
+
+                    <!-- mHead -->
+                    <div id="mHead"><img src="resources/images/밍글로고.PNG" style="width:90%; height:90%;"></div>
+
+                    <!-- mBody -->
+                    <div id="mBody">
+                        <div class="material-icons">home
+                            <a href="../mingle admin/mingle.html">홈</a>
+                        </div>
+                        <div class="material-icons">store
+                            <a href="../mingle store admin/store admin.html">상점관리</a>
+                        </div>
+                        <div class="material-icons">view_list
+                            <a href="../member/mingle-member.html">회원관리</a>
+                        </div>
+                        <div class="material-icons">signpost
+                            <a href="게시글관리.html">게시글관리</a>
+                        </div>
+                        <div class="material-icons">logout
+                            <a href="javascript:void(0)">로그아웃</a>
+                        </div>
+                    </div>
+
+                    <!-- mFoot -->
+                    <div id="mFoot"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
