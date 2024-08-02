@@ -79,13 +79,14 @@ form{
   font-weight: 400;
   font-size: 45px;
   text-align:center;
-  font-family:Katuri;
+  font-family:'Katuri';
 }
 
 .sub_title {
   font-weight: 600;
   margin: 2%;
   font-size:25px;
+  font-family:'omyu_pretty';
 }
 
 .form_group {
@@ -95,6 +96,7 @@ form{
   align-items: baseline;
   margin: 5px;
   justify-content: center;
+  font-family:'omyu_pretty';
 }
 
 .form_style {
@@ -106,14 +108,15 @@ form{
   padding: 15px 8px;
   border-radius: 4px;
   font-size: 20px;
+  font-family:'omyu_pretty';
 }
 
 /* 본인인증 버튼 */
 .verification {
   position:absolute;
-  left:410px;
+  left:415px;
   border:0;
-  top:50px;
+  top:57px;
   padding: 5px;
   width: 90px;
   height: 35px;
@@ -122,6 +125,7 @@ form{
   border-radius: 10px;
   font-weight: 800;
   box-shadow: 3px 3px 0px 0px #5390D9;
+  font-family:'omyu_pretty';
  }
 
  .verification:hover {
@@ -138,6 +142,7 @@ form{
 
 input::placeholder{
   color:#264143;
+  font-family:'omyu_pretty';
 }
 
 input.error::placeholder{
