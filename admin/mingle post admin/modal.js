@@ -21,3 +21,10 @@ $(function(){
     });
 
 })
+
+
+    // 오픈챗
+function openChat(){
+    window.location.href = "../chatting admin/chat/chat.html"    
+}
+    
