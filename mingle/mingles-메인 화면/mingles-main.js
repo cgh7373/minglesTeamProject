@@ -71,3 +71,23 @@ $(document).ready(function(){
 
     $('#my_info__2, #my_info__3, #my_info__4').tooltip();
   });
+
+  $(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+
+  });
+
+const show = document.getElementById("show");
+const mp3button = document.getElementById("mp3Button");
+
+let isShow = false;
+
+mp3button.addEventListener("click",function(){
+    isShow = !isShow;
+    if(isShow){
+        show.classList.add('youShow');
+    }else{
+        show.classList.remove('youShow');
+    }
+
+});
