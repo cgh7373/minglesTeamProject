@@ -217,4 +217,5 @@ right: 0;
 
 .right-list__content ul .list__check{
     position: absolute;
+    left: 5px;
 }

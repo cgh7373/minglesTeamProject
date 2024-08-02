@@ -28,6 +28,13 @@
         var colours=new Array("#80FFDB", "#48BFE3", "#5E60CE", "#7400B8", "#72EFDD"); // colours for top, right, bottom and left borders and background of bubbles
         var bubbles=66; // maximum number of bubbles on screen
         var over_or_under="over"; // set to "over" for bubbles to always be on top, or "under" to allow them to float behind other objects
+        
+        /****************************
+        * JavaScript Bubble Cursor  *
+        *(c)2010-13 mf2fm web-design*
+        *  http://www.mf2fm.com/rv  *
+        * DON'T EDIT BELOW THIS BOX *
+        ****************************/
         var x=ox=400;
         var y=oy=300;
         var swide=800;
@@ -227,7 +234,53 @@
         <!-- 배경화면 -->
         
         <div id="container"></div>
-        
+        <button id="homeKey" class="rounded-circle"></button>
+            <!-- 메뉴바 -->
+            <div id="menuBar">
+
+              <div id="menuWrap">
+
+                  <!-- 뒤로가기버튼 -->
+                  <button
+                      id="menuBack"
+                      class="rounded-circle"
+                      style="width: 70px; height: 70px; background-color: white; border: none;">
+                      <img
+                          src="../resources/images/greenpointer.png"
+                          style="background-color: white; width: 70%; height: 70%;">
+                      <!-- 화살표 이미지(->)로 변경, deg(270 제거) -->
+                  </button>
+
+                  <!-- mHead -->
+                  <div id="mHead"><img
+                      src="../resources/images/밍글로고.PNG"
+                      style="width:90%; height:90%;"></div>
+
+                  <!-- mBody -->
+                  <div id="mBody">
+                      <div class="material-icons">home
+                          <a href="../../mingle admin/mingle.html">홈</a>
+                      </div>
+                      <div class="material-icons">store
+                          <a href="../../mingle store admin/store admin.html">상점관리</a>
+                      </div>
+                      <div class="material-icons">view_list
+                          <a href="../../member/mingle-member.html">회원관리</a>
+                      </div>
+                      <div class="material-icons">signpost
+                          <a href="../../mingle post admin/게시글관리.html">게시글관리</a>
+                      </div>
+                      <div class="material-icons">logout
+                          <a href="javascript:void(0)">로그아웃</a>
+                      </div>
+                  </div>
+
+                  <!-- mFoot -->
+                  <div id="mFoot"></div>
+
+              </div>
+
+          </div>
 
 
         <!-- 채팅창 -->

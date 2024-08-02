@@ -106,9 +106,25 @@
                 </div>
             </div><!--좋아요 div 끝-->
 
-               <!--mp3 음악 버튼-->
-            <div class="music">
-                <img src="../resources/images/cd.png" alt="cd사진" title="내 MP3" data-toggle="popover" data-placement="bottom" data-content="여기에 mp3 api 삽입할 예정입니당">
+             <!--mp3 음악 버튼-->
+               <div class="music">
+               <img src="../resources/images/cd.png" alt="cd그림" id ="mp3Button">
+
+                <!-- img 클릭하면 이 창 뜸 -->
+                <div class ="popover-content" id = "show">
+                    <div class = "iframe-container" id="player">
+                        <iframe src="https://www.youtube.com/embed/?autoplay=1&mute=1" allow="autoplay"></iframe>
+                    </div>
+                    <div class = "music--info">
+                        <p class="music--title">ETA</p>
+                        <p class="music--singer">뉴진스</p>
+                    </div>
+                    <!-- 플리 버튼 -->
+                    <button class="material-icons">expand_less</button>
+                    <button class="material-icons">expand_more</button>
+                    <button class="material-icons" id="playlist">playlist_play</button>
+                </div>
+
             </div>
 
         </div> <!--메인화면 div 끝-->

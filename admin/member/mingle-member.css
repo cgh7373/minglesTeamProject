@@ -1,0 +1,461 @@
+div,img
+{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Katuri';
+    src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+    color: #222222;
+}
+
+a:hover {
+    color: #64DFDF;
+    text-decoration: none;
+}
+
+
+#wrap {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    border: 3px solid #07BEB8;
+    /*색상 변경, 테두리 1px -> 3px로 변경*/
+    border-radius: 20px;
+    background-color: #80FFDB;
+    /*색상 변경*/
+    margin: auto;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    font-family: 'katuri';
+}
+#container {
+    width: 94%;
+    height: 95%;
+    background-color: white;
+    border: 1px solid #64DFDF;
+    /*색상 변경*/
+    border-radius: 20px;
+    position: absolute;
+    top: 2.5%;
+    left: 1.5%;
+}
+#homeKey {
+    width: 3%;
+    height: 6%;
+    position: absolute;
+    left: 96.3%;
+    top: 50%;
+    cursor: pointer;
+    border: 2px outset #07BEB8; /*색상 변경, 테두리 solid -> outset으로 변경, 테두리 1px -> 2px로 변경*/
+    box-shadow: 0 0 2px 1px #08817d; /*색상 변경(팔레트에 없는 색상)*/
+}
+/* 메뉴바 스타일 */
+#menuBar {
+    width: 20%;
+    height: 100%;
+    border-radius: 20px;
+    border: 3px solid #07BEB8;
+    box-shadow: 0 0 1px 1px #07BEB8;
+    right: 0;
+    position: absolute;
+    background-color: white;
+    display: none;
+}
+
+/* 메뉴 랩 스타일 */
+#menuWrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* 메뉴 헤드 스타일 */
+#mHead {
+    position: absolute;
+    left: 24%;
+    width: 54%;
+    height: 10%;
+    border-bottom: 2px solid #07BEB8;
+}
+
+/* 메뉴 바디 스타일 */
+#mBody {
+    top: 20%;
+    position: absolute;
+}
+
+#mBody .material-icons {
+    margin: 55px;
+}
+
+#mBody .material-icons a {
+    margin: 5px;
+}
+
+.menu-button {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border: none;
+}
+
+.menu-image {
+    background-color: white;
+    width: 70%;
+    height: 70%;
+}
+
+.menu-logo {
+    width: 90%;
+    height: 90%;
+}
+
+/* 매인화면--------------------------------------------------- */
+.container
+{
+    position: relative;
+}
+.tab
+{
+    float:left;
+    position: absolute;
+    width:90%; 
+    height:90%;
+    box-sizing: border-box;
+    top: 40px;
+}
+.memberTitle
+{
+    width: 12%;
+    height: 7%;
+    position: absolute;
+    top: 3%;
+    left: 5.5%;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    color: #07BEB8;
+}
+.paginame
+{
+    position: absolute;
+    border: 1px solid black;
+    left: 10%;
+    top: 3%;
+    font-size: 50px;
+}
+.tabnav
+{
+    position: absolute;
+    display: flex;
+    font-size:0; 
+    width:45%; 
+    height: 40px;
+    left: 46%;
+}
+.tabnav li
+{
+    width: 50%;
+}
+.tabnav li a
+{
+    width: 100%;
+    height: 100%;
+    font-size: 5%;
+}
+.btnbox
+{
+    width: 40%;
+    display: flex;
+    justify-content: start;
+
+}
+.btnbox .btn
+{
+    background-color:  #80FFDB;
+    margin-left: 10px;
+}
+.btnbox .btn:hover
+{
+    background-color:  #48BFE3;
+}
+.search
+{
+    position: absolute;
+    top: 3px;
+    right: -4%;
+    height: 46px;
+}
+.search input{
+    width: 36px;
+    height: 40px;
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    color: #777;
+    font-size: 12px;
+    transition: width .4s;
+    margin-bottom: 10px;
+}
+.search input:focus{
+    width: 190px;
+    border-color: #08817d;
+}
+.search .material-icons{
+    height: 24px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 5px;
+    margin: auto;
+    transition: .4s;
+}
+.search.focused .material-icons{
+    opacity: 0;
+}
+.tabnav li
+{
+    width: 20%;
+    display: inline-block;  
+    height:46px; 
+    text-align:center; 
+}
+.tabnav li a:before
+{
+    position:absolute; 
+    left:0; 
+    top:0px; 
+    width:100%; 
+    height:3px; 
+}
+.tabnav li a.active
+{
+    border-bottom:1px solid #fff;
+}
+.tabnav li a
+{ 
+    position:relative; 
+    display:block; 
+    background: #C4FFF9; 
+    color:#07BEB8; 
+    padding:0 30px; 
+    line-height:46px; 
+    text-decoration:none; 
+    font-size:16px;
+}
+.tabnav li a:hover,.tabnav li a.active
+{
+    background-color: #07BEB8;
+    color:#C4FFF9; 
+}
+.tabcontent
+{
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    top: 9%;
+    left: 5%;
+}
+/* 탭컨텐츠 */
+.tab01-1
+{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    line-height: 75px;
+    background-color: #07BEB8;;
+}
+/* 회원 정보 :all*/
+#tab01,#tab02
+{
+    width: 100%;
+    height: 100%;
+}
+/* 회원 정보 :일반회원*/
+
+/*모달*/
+#modalContainer {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+#modalContainer.hidden
+{
+    display: none;
+}
+#modalContent
+{
+    position: relative;
+    background-color: #ffffff;
+    width: 600px;
+    height: 850px;
+    padding: 10px;
+    text-align: center;
+}
+#modalContent .user-information
+{
+    margin: auto;
+    margin-top: 10px;
+    width: 95%;
+}
+#modalContent .user-information #inform-content
+{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    border: 1px solid black;
+}
+#modalContent .user-information #inform-content th
+{
+    border: 1px solid black;
+    width: 20%;
+}
+#modalContent .comment-select
+{
+    margin: auto;
+    margin-top: 12px;
+    width: 95%;
+    height: 28%;
+    border: 1px solid black;
+}
+#modalContent .activity
+{
+    margin: auto;
+    margin-top: 12px;
+    width: 95%;
+    height: 28%;
+    border: 1px solid black;
+}
+#modalContent .declaration
+{
+    margin: auto;
+    margin-top: 12px;
+    width: 95%;
+    height: 28%;
+    border: 1px solid black;
+}
+#modalContent #modalCloseButton
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+/*----------------*/
+.tab01-1-1
+{
+    list-style-type: none;
+}
+.post-container p
+{
+    width: 20%;
+    text-align: center;
+}
+.post-container2 p
+{
+    width: 16.6%;
+    text-align: center;
+}
+.tab02-2-2
+{
+    list-style-type: none;
+}
+.post-container,.post-container2
+{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #d7d7d7;
+    background-color: #d2eff7;
+    margin: 15px;
+}
+.post-container:hover,.post-container2:hover
+{
+    border: 2px solid white;
+    background-color: #95e2f7;
+    box-shadow: 0 0 5px #2cbebe, 0 0 10px #177483, 0 0 15px #02455a;
+    cursor: pointer;
+}
+.post-title,.post-title2
+{
+    font-size: 20px;
+}
+.post-number,.post-number2
+{
+    font-size: 15px;
+    padding: 15px;
+}
+.pagination-container,.pagination-container2
+{
+    display: flex;
+    justify-content: center;
+}
+.prev-button:hover,
+.next-button:hover,
+.number-button:hover,
+.prev-button2:hover,
+.next-button2:hover,
+.number-button2:hover  
+{
+    font-weight: 800;
+    color: red;
+}
+.pagination-container,.pagination-container2 
+{
+    position: absolute;
+    left: 46%;
+    bottom: 5%;
+    user-select: none;
+}
+.selected,.selected2
+{
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: dodgerblue;
+}
+#userlist,#userlist2
+{
+    border: 1px solid black;
+    width: 98.1%;
+    height: 40px;
+    margin: auto;
+}
+#userlist>tbody>tr>th
+{
+    width: 20%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 40px;
+}
+#userlist2>tbody>tr>th
+{
+    width: 16.6%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 40px;
+}
+#userlist>tbody>tr>th:first-child
+{
+    padding-left: 5px;
+}
+#userlist>tbody>tr>th:last-child
+{
+    padding-right: 2px;
+}
