@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,10 +16,9 @@
     <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
     
     <!-- 내부파일 -->
-    <link rel="stylesheet" href="mingle.css">
-    <script src="mingle.js"></script>
-    <script src="resources/jQuery/jquery-3.7.1.min.js"></script>
-    <link rel="icon" href="resources/images/Mingles아이콘-removebg-preview.png">
+    <link rel="stylesheet" href="./resources/css/mingleEgg.css">
+    <script src="./resources/js/mingleEgg.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 </head>
 
@@ -141,12 +142,12 @@
 
                 <!-- 뒤로가기버튼 -->
                 <button id="menuBack" class="rounded-circle" style="width: 70px; height: 70px; background-color: white; border: none;">
-                    <img src="resources/images/greenpointer.png" style="background-color: white; width: 70%; height: 70%;">
+                    <img src="../../resources/images/greenpointer.png" style="background-color: white; width: 70%; height: 70%;">
                     <!-- 화살표 이미지(->)로 변경, deg(270 제거) -->
                 </button>
 
                 <!-- mHead -->
-                 <div id="mHead"><img src="resources/images/밍글로고.PNG" style = "width:90%; height:90%;"></div>
+                 <div id="mHead"><img src="../../resources/images/밍글로고.PNG" style = "width:90%; height:90%;"></div>
 
                 <!-- mBody -->
                  <div id="mBody"></div>

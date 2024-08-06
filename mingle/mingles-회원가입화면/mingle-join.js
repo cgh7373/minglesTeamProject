@@ -1,110 +1,80 @@
-document.addEventListener("DOMContentLoaded", function(){
-  let alertId = document.getElementById("id");
-  let alertPwd = document.getElementById("password");
-  let alertName = document.getElementById("name");
-  let alertPhone = document.getElementById("phone");
-  let alertEmail = document.getElementById("email");
-  let alertGender = document.getElementsByClassName("form_style_gender");
+// 문서가 로드되면 실행될 함수
+document.addEventListener('DOMContentLoaded', function() {
+    // 정규 표현식 정의
+    let idRegExp = /^[a-zA-Z][a-zA-Z0-9]{5,19}$/;
+    let passwordRegExp = /^[a-zA-Z0-9]{8,16}$/;
+    let nameRegExp = /^[a-zA-Z가-힣]{1,8}$/;
+    let phoneRegExp = /^\d+$/; // 간단한 숫자만 허용 (특수문자나 문자 제외)
+    let emailRegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  // 아이디 필수입력
-  alertId.addEventListener("focusout",function(){
-    if(alertId.value.trim() === ""){
-      alertId.placeholder ="필수 입력항목입니다.";
-      alertId.classList.add("error");
-    }else{
-      alertId.placeholder ="영문으로 시작하는 영문자&숫자 6~20자";
-      alertId.classList.remove("error");
-    }
-  })
+    // 아이디 입력 필드 선택
+    let idField = document.getElementById("id");
+    // 비밀번호 입력 필드 선택
+    let passwordField = document.getElementById("password");
+    // 이름(닉네임) 입력 필드 선택
+    let nameField = document.getElementById("name");
+    // 휴대폰 번호 입력 필드 선택
+    let phoneField = document.getElementById("phone");
+    // 이메일 입력 필드 선택
+    let emailField = document.getElementById("email");
 
-  // 아이디 정규화
-  let regExp = /^[a-zA-Z][a-zA-Z0-9]{5,19}$/;
-  alertId.addEventListener("change", function(){
-    if(!regExp.test(alertId.value.trim())){
-      alert("올바른 형식의 아이디가 아닙니다.");
-      console.log(alertId.value);}
-  })
+    // 아이디 입력 필드의 change 이벤트 리스너
+    idField.addEventListener("change", function() {
+        let idValue = idField.value.trim(); // 공백 제거
+        if (!idRegExp.test(idValue)) {
+            Swal.fire({
+                icon: 'error',
+                title: '올바른 형식의 아이디가 아닙니다.',
+                text: '아이디는 영문으로 시작해야 하고, 6~20자의 길이를 가져야 합니다.',
+            });
+        }
+    });
 
-  // 비밀번호 필수입력
-  alertPwd.addEventListener("focusout",function(){
-    if(alertPwd.value.trim() === ""){
-      alertPwd.placeholder ="필수 입력항목입니다.";
-      alertPwd.classList.add("error");
-    }else{
-      alertPwd.placeholder = "영문, 숫자로 구성된 8~16자";
-      alertPwd.classList.remove("error");
-    }
-  })
+    // 비밀번호 입력 필드의 change 이벤트 리스너
+    passwordField.addEventListener("change", function() {
+        let passwordValue = passwordField.value.trim();
+        if (!passwordRegExp.test(passwordValue)) {
+            Swal.fire({
+                icon: 'error',
+                title: '올바른 형식의 비밀번호가 아닙니다.',
+                text: '비밀번호는 8~16자의 영문자와 숫자만 포함해야 합니다.',
+            });
+        }
+    });
 
-  //비밀번호 정규화
-  regExp = /^[a-zA-Z0-9]{8,16}$/;
-  alertPwd.addEventListener("change",function(){
-    if(!regExp.test(alertPwd.value)){
-      alert("올바른 형식의 비밀번호가 아닙니다.");
-    }
-  })
+    // 이름(닉네임) 입력 필드의 change 이벤트 리스너
+    nameField.addEventListener("change", function() {
+        let nameValue = nameField.value.trim();
+        if (!nameRegExp.test(nameValue)) {
+            Swal.fire({
+                icon: 'error',
+                title: '올바른 형식의 이름(닉네임)이 아닙니다.',
+                text: '이름(닉네임)은 한글이나 영문으로 8자 이내여야 합니다.',
+            });
+        }
+    });
 
-  // 이름(닉네임) 필수 입력
-  alertName.addEventListener("focusout",function(){
-    if(alertName.value.trim() === ""){
-      alertName.placeholder = "이름 (닉네임)은 필수 입력입니다.";
-      alertName.classList.add("error");
-    }else{
-      alertName.placeholder = "한글, 영문 사용 8자 이내(특수문자x)";
-      alertName.classList.remove("error");
-    }
-  })
+    // 휴대폰 번호 입력 필드의 change 이벤트 리스너
+    phoneField.addEventListener("change", function() {
+        let phoneValue = phoneField.value.trim();
+        if (!phoneRegExp.test(phoneValue)) {
+            Swal.fire({
+                icon: 'error',
+                title: '올바른 형식의 휴대폰 번호가 아닙니다.',
+                text: '휴대폰 번호는 숫자만 입력해야 합니다.',
+            });
+        }
+    });
 
-  // 이름(닉네임) 정규화
-  regExp = /[가-힣a-zA-Z]{1,8}$/;
-  alertName.addEventListener("change",function(){
-    if(!regExp.test(alertName.value)){
-      alert("올바른 형식의 이름(닉네임)이 아닙니다.");
-    }
-  })
-  
-  // 휴대폰 번호 필수 입력
-  alertPhone.addEventListener("focusout",function(){
-    if(alertPhone.value.trim() === ""){
-      alertPhone.placeholder = "회원정보 분실시 복구를 위한 필수항목입니다.";
-      alertPhone.classList.add("error");
-    }else{
-      alertPhone.placeholder = "-없이 입력하세요.";
-      alertPhone.classList.remove("error");
-    }
-  })
-
-  // 휴대폰번호 정규화
-  regExp = /^\d{11}$/;
-  alertPhone.addEventListener("change",function(){
-    if(!regExp.test(alertPhone.value)){
-      alert("숫자만 입력해주세요.")
-    }
-  })
-
-  // 이메일 필수 입력
-  alertEmail.addEventListener("focusout",function(){
-    if(alertEmail.value.trim() === ""){
-      alertEmail.placeholder = "회원정보 분실시 복구를 위한 필수항목입니다.";
-      alertEmail.classList.add("error");
-    }else{
-      alertEmail.placeholder = "이메일을 입력하세요.";
-      alertEmail.classList.remove("error");
-    }
-  })
-
-  // 이메일 정규화
-  regExp =  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-  alertEmail.addEventListener("change",function(){
-    if(!regExp.test(alertEmail.value)){
-      alert("올바른 이메일 형식이 아닙니다.");
-    }
-  })
-
-  alertGender.addEventListener("DOMContentLoaded",function(){
-    if(alertGender.value == ""){
-      alert("성별을 표시해주세요");
-    }
-  })
-
-})
+    // 이메일 입력 필드의 change 이벤트 리스너
+    emailField.addEventListener("change", function() {
+        let emailValue = emailField.value.trim();
+        if (!emailRegExp.test(emailValue)) {
+            Swal.fire({
+                icon: 'error',
+                title: '올바른 형식의 이메일이 아닙니다.',
+                text: '유효한 이메일 주소를 입력해 주세요.',
+            });
+        }
+    });
+});

@@ -1,3 +1,6 @@
+<%@page import="com.kh.member.model.vo.Member"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,18 +19,21 @@
   <!-- https://animate.style/ 웹사이트 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+  <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <!-- 내부파일 -->
-  <link rel="stylesheet" href="../mingles-회원가입화면/mingle-join.css">
-  <script src="../mingles-회원가입화면/mingle-join.js"></script>
-  <script src="../resources/jQuery/jquery-3.7.1.min.js"></script>
-  <link rel="icon" href="../resources/images/Mingles아이콘-removebg-preview.png">
+  <link rel="stylesheet" href="./resources/css/mingle-join.css">
+  <script src="./resources/js/mingle-join.js"></script>
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="icon" href="./resources/images/Mingles아이콘-removebg-preview.png">
 
 </head>
 
 <body>
 
   <div id="wrap">
-
+  
     <!-- 메인 화면 -->
     <div id="container">
       
@@ -41,23 +47,23 @@
        <!-- 회원가입 화면 -->
       <div class="form_area">
         <p class="title">회원 가입</p>
-      <form action="">
+      <form action="<%=request.getContextPath()%>/insert.mi">
         <!-- 아이디 입력 -->
         <div class="form_group">
           <label class="sub_title" for="id">ID</label>
-          <input placeholder="영문으로 시작하는 영문자&숫자 6~20자" class="form_style" id="id"type="text" required />
+          <input placeholder="영문으로 시작하는 영문자&숫자 6~20자" class="form_style" id="id" type="text" name="enrollId" required/>
         </div>
 
         <!-- 비밀번호 입력 -->
         <div class="form_group">
           <label class="sub_title" for="password">Password</label>
-          <input placeholder="영문, 숫자로 구성된 8~16자" class="form_style" id="password" type="password" required />
+          <input placeholder="영문, 숫자로 구성된 8~16자" class="form_style" id="password" type="password" name="enrollPwd" required/>
         </div>
 
         <!-- 이름(닉네임) 입력 -->
         <div class="form_group">
           <label class="sub_title" for="name">이름 (닉네임)</label>
-          <input placeholder="한글, 영문 사용 8자 이내(특수문자x)" class="form_style" id="name" type="text" required />
+          <input placeholder="한글, 영문 사용 8자 이내(특수문자x)" class="form_style" id="name" type="text" name="enrollNickname" required />
           <button class = "verification">
             <span class="text">본인인증</span>
           </button>
@@ -65,20 +71,20 @@
 
         <!-- 생년월일 입력 -->
         <div class="form_group">
-          <label class="sub_title" for="birthday">생년월일</label>
-          <input class="form_style" id= "birthday" type="date" />
+          <label class="sub_title" for="birthdate">생년월일</label>
+          <input class="form_style" id= "birthdate" type="date" name="enrollBirthdate" />
         </div>
 
         <!-- 휴대폰 번호 입력  -->
         <div class="form_group">
           <label class="sub_title" for="phone">휴대폰번호</label>
-          <input placeholder="-없이 입력하세요" class="form_style" id="phone" type="text" required/>
+          <input placeholder="-없이 입력하세요" class="form_style" id="phone" type="text" name="enrollPhone" required/>
         </div>
 
         <!-- 이메일 입력 -->
         <div class="form_group">
           <label class="sub_title" for="email">Email</label>
-          <input placeholder="이메일을 입력하세요" class="form_style" id="email" type="email" required/>
+          <input placeholder="이메일을 입력하세요" class="form_style" id="email" type="email" name="enrollEmail" required/>
         </div>
 
         <!-- 성별 입력 -->
@@ -90,12 +96,12 @@
 
         </div>
 
-        <!-- 추가정보 입력버튼 -->
+        <!-- 추가정보 입력버튼 (일단 submit으로 해놓음) -->
         <div>
-          <button class="btn">추가 정보 입력</button>
+          <button class="btn" type="submit">추가 정보 입력</button>
         </div>
       </form>
-
+	
     </div>
  
      
@@ -188,10 +194,6 @@
 
   </div>
 
-  <!-- 홈키 -->
-  <button id="homeKey" class="rounded-circle"></button>
-
-    
       <!-- mBody -->
       <div id="mBody"></div>
 
