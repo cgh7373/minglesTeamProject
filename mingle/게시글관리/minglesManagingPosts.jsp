@@ -38,6 +38,7 @@
                         <button class="btn-set" id="b2"><span>메세지 보내기</span></button>
                         <button class="btn-set" id="b3"><span>블랙리스트</span></button>
                         <button class="btn-set" id="b4"><span>공지사항 작성</span></button>
+                        <button class="btn-set" id="b5" onclick="history.back()"><span>뒤로가기</span></button>
                     </div>
                 </div>
                 <div id="post-right__list">
