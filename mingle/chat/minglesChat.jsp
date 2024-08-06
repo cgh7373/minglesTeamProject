@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +9,7 @@
     <title>Mingles chatting</title>
 
     <!-- 외부파일 -->
-	<script defer src="../resources/jQuery/jquery-3.7.1.min.js"></script>
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -214,8 +216,8 @@
     
     
     <!-- 내부파일 -->
-    <link rel="stylesheet" href="../chat/chat.css">
-    <script defer src="../chat/chat.js"></script>
+    <link rel="stylesheet" href="../../resources/css/mingles-chat.css">
+    <script defer src="../../resources/js/mingles-chat.js"></script>
     
     <link rel="icon" href="../chat/favicon.ico">
 
@@ -235,70 +237,70 @@
          <section class="chat">
             
              <!-- 친구리스트 -->
-             <a href="http://127.0.0.1:5500/chat/chat.html" class="chat-logo"><img src="../resources/images/Mingles로고-움직임-짤.gif" alt="mingles"></a>
+             <a href="http://127.0.0.1:5500/chat/chat.html" class="chat-logo"><img src="../../resources/images/Mingles로고-움직임-짤.gif" alt="mingles"></a>
              <div class="chat-left">
 
                 <!-- 로고 누르면 home창 만들고 싶어. 안예쁠것 같아서 고민중.! -->
 
                 <ul class="chat-friend">
                     <li class="friendList">
-                        <div class="friend__icon"><img src="../resources/images/차은우.jpeg" alt=""></div>
+                        <div class="friend__icon"><img src="../../resources/images/차은우.jpeg" alt=""></div>
                         <div class="friend-info">
                             <span class="friend__name">김서경</span>
                             <span class="friend__text">마지막채팅떴으면 아주아주아주아주 좋겠다리좋겠다~</span>
                         </div>
                     </li>
                     <li class="friendList">
-                        <div class="friend__icon"><img src="../resources/images/차은우.jpeg" alt=""></div>
+                        <div class="friend__icon"><img src="../../resources/images/차은우.jpeg" alt=""></div>
                         <div>
                             <span class="friend__name">이주영</span>
                             <span class="friend__text">반짝반짝 작은별 아름답게 비치네</span>
                         </div>
                     </li>
                     <li class="friendList">
-                        <div class="friend__icon"><img src="../resources/images/차은우.jpeg" alt=""></div>
+                        <div class="friend__icon"><img src="../../resources/images/차은우.jpeg" alt=""></div>
                         <div>
                             <span class="friend__name">유현동</span>
                             <span class="friend__text"> 동쪽하늘에서도 서쪽하늘에서도</span>
                         </div>
                     </li>
                     <li class="friendList">
-                        <div class="friend__icon"><img src="../resources/images/차은우.jpeg" alt=""></div>
+                        <div class="friend__icon"><img src="../../resources/images/차은우.jpeg" alt=""></div>
                         <div>
                             <span class="friend__name">김상우</span>
                             <span class="friend__text">반짝반짝 작은별 아름답게 비치네 짝!</span>
                         </div>
                     </li>
                     <li class="friendList">
-                        <div class="friend__icon"><img src="../resources/images/차은우.jpeg" alt=""></div>
+                        <div class="friend__icon"><img src="../../resources/images/차은우.jpeg" alt=""></div>
                         <div>
                             <span class="friend__name">정택은</span>
                             <span class="friend__text"></span>
                         </div>
                     </li>
                     <li class="friendList">
-                        <div class="friend__icon"><img src="../resources/images/차은우.jpeg" alt=""></div>
+                        <div class="friend__icon"><img src="../../resources/images/차은우.jpeg" alt=""></div>
                         <div>
                             <span class="friend__name">최규호</span>
                             <span class="friend__text">그냥.. 복붙만 하니까 이상해서 아무거나 써봤어요;;</span>
                         </div>
                     </li>
                     <li class="friendList">
-                        <div class="friend__icon"><img src="../resources/images/차은우.jpeg" alt=""></div>
+                        <div class="friend__icon"><img src="../../resources/images/차은우.jpeg" alt=""></div>
                         <div>
                             <span class="friend__name">김서경</span>
                             <span class="friend__text">마지막채팅떴으면 아주아주아주아주 좋겠다리좋겠다~</span>
                         </div>
                     </li>
                     <li class="friendList">
-                        <div class="friend__icon"><img src="../resources/images/차은우.jpeg" alt=""></div>
+                        <div class="friend__icon"><img src="../../resources/images/차은우.jpeg" alt=""></div>
                         <div>
                             <span class="friend__name">김서경</span>
                             <span class="friend__text">마지막채팅떴으면 아주아주아주아주 좋겠다리좋겠다~</span>
                         </div>
                     </li>
                     <li class="friendList">
-                        <div class="friend__icon"><img src="../resources/images/차은우.jpeg" alt=""></div>
+                        <div class="friend__icon"><img src="../../resources/images/차은우.jpeg" alt=""></div>
                         <div>
                             <span class="friend__name">김서경</span>
                             <span class="friend__text">마지막채팅떴으면 아주아주아주아주 좋겠다리좋겠다~</span>
@@ -316,49 +318,49 @@
                 <div class="chatRoom">
                     <canvas id="jsCanvas" class="canvas"></canvas>
                     <div class="chatting ch1">
-                        <div class="icon"><img src="../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
+                        <div class="icon"><img src="../../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
                         <div class="textbox">안녕하세요~ 김서경입니당ㅎㅎ</div>
                     </div>
                     <div class="chatting ch2">
-                        <div class="icon"><img src="../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
+                        <div class="icon"><img src="../../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
                         <div class="textbox">안녕하세요. 홈페이지 주인입니다.</div>
                     </div>
                     <div class="chatting ch1">
-                        <div class="icon"><img src="../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
+                        <div class="icon"><img src="../../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
                         <div class="textbox">홈페이지가 너무 예뻐서 친하게 지내고 싶어요~~</div>
                     </div>
                     <div class="chatting ch2">
-                        <div class="icon"><img src="../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
+                        <div class="icon"><img src="../../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
                         <div class="textbox">예쁘게 봐주셔서 감사합니다. 자주 소통해요ㅎㅎ</div>
                     </div>
                     <div class="chatting ch1">
-                        <div class="icon"><img src="../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
+                        <div class="icon"><img src="../../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
                         <div class="textbox">홈페이지가 너무 예뻐서 친하게 지내고 싶어요~~</div>
                     </div>
                     <div class="chatting ch2">
-                        <div class="icon"><img src="../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
+                        <div class="icon"><img src="../../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
                         <div class="textbox">예쁘게 봐주셔서 감사합니다. 자주 소통해요ㅎㅎ</div>
                     </div><div class="chatting ch1">
-                        <div class="icon"><img src="../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
+                        <div class="icon"><img src="../../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
                         <div class="textbox">홈페이지가 너무 예뻐서 친하게 지내고 싶어요~~</div>
                     </div>
                     <div class="chatting ch2">
-                        <div class="icon"><img src="../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
+                        <div class="icon"><img src="../../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
                         <div class="textbox">예쁘게 봐주셔서 감사합니다. 자주 소통해요ㅎㅎ</div>
                     </div><div class="chatting ch1">
-                        <div class="icon"><img src="../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
+                        <div class="icon"><img src="../../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
                         <div class="textbox">홈페이지가 너무 예뻐서 친하게 지내고 싶어요~~</div>
                     </div>
                     <div class="chatting ch2">
-                        <div class="icon"><img src="../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
+                        <div class="icon"><img src="../../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
                         <div class="textbox">예쁘게 봐주셔서 감사합니다. 자주 소통해요ㅎㅎ</div>
                     </div>
                     <div class="chatting ch1">
-                        <div class="icon"><img src="../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
+                        <div class="icon"><img src="../../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
                         <div class="textbox">홈페이지가 너무 예뻐서 친하게 지내고 싶어요~~</div>
                     </div>
                     <div class="chatting ch2">
-                        <div class="icon"><img src="../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
+                        <div class="icon"><img src="../../resources/images/Mingles아이콘-removebg-preview.png" alt=""></div>
                         <div class="textbox">예쁘게 봐주셔서 감사합니다. 자주 소통해요ㅎㅎ</div>
                     </div>
                     
