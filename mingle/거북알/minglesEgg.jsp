@@ -31,6 +31,7 @@
 
             <header id="turtle-egg-header">
                 <div id="teh__text">MY 거북알</div>
+                <button class="" onclick="history.back()">뒤로가기</button>
             </header>
 
             <section id="turtle-egg-content">
