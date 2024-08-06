@@ -96,96 +96,92 @@
 
         </div>
 
-        <!-- 추가정보 입력버튼 (일단 submit으로 해놓음) -->
+        <!-- 추가정보 입력버튼 -->
         <div>
-          <button class="btn" type="submit">추가 정보 입력</button>
+          <button class="btn">추가 정보 입력</button>
         </div>
+
+        <!-- 추가정보 입력화면 -->
+        <div class="form_area">
+          <p class="title">추가정보</p>
+            <!-- 별자리 입력 -->
+           <div class="form_group_2">
+              <label class="sub_title" for="zodiacType" style ="font-size:30px;">나의 별자리는?</label>
+              <select name="zodiacType" id="zodiac" class ="select">
+                <option value="null">선택안함</option>
+                <option value="aries">양자리</option>
+                <option value="taurus">황소자리</option>
+                <option value="gemini">쌍둥이자리</option>
+                <option value="cancer">게자리</option>
+                <option value="leo">사자자리</option>
+                <option value="virgo">처녀자리</option>
+                <option value="libra">천칭자리</option>
+                <option value="scorpio">전갈자리</option>
+                <option value="sagittarius">궁수자리</option>
+                <option value="capricorn">염소자리</option>
+                <option value="aquarius">물병자리</option>
+                <option value="pisces">물고기자리</option>
+              </select>
+            </div> 
+  
+            <!-- MBTI 입력 -->
+            <div class="form_group_2">
+              <label class="sub_title" for="MBTI" style ="font-size:30px;">나의 MBTI는?</label>
+              <select name="MBTI" id="mbti" class ="select">
+                <option value="null">선택안함</option>
+                <option value="istj">ISTJ</option>
+                <option value="intj">INTJ</option>
+                <option value="estj">ESTJ</option>
+                <option value="entj">ENTJ</option>
+                <option value="istp">ISTP</option>
+                <option value="intp">INTP</option>
+                <option value="estp">ESTP</option>
+                <option value="entp">ENTP</option>
+                <option value="isfj">ISFJ</option>
+                <option value="infj">INFJ</option>
+                <option value="esfj">ESFJ</option>
+                <option value="enfj">ENFJ</option>
+                <option value="isfp">ISFP</option>
+                <option value="infp">INFP</option>
+                <option value="esfp">ESFP</option>
+                <option value="enfp">ENFP</option>
+              </select>
+            </div> 
+  
+            <!-- 혈액형 입력 -->
+            <div class="form_group_ABO">
+              <label class="sub_title" for="bloodType" style ="font-size:30px;">나의 혈액형은?</label>
+                <div class="Radio">
+                  <input value = "A" type="radio" name="bloodType" id="radioA" />
+                  <label for="radioA">A형</label>
+                </div>
+                <div class="Radio">
+                  <input value = "B" type="radio" name="bloodType" id="radioB"/>
+                  <label for="radioB">B형</label>
+                </div>
+                  <div class="Radio">
+                  <input value = "AB" type="radio" name="bloodType" id="radioAB" />
+                  <label for="radioAB">AB형</label>
+                </div>
+                  <div class="Radio">
+                  <input value = "O" type="radio" name="bloodType" id="radioO"/>
+                  <label for="radioO"> O형</label>
+                </div>
+            </div>
+  
+            <!-- 회원가입버튼 -->
+            <br><br>
+            <button class = "welcome">
+              <button class="text" type="submit">Welcome!</button>
+            </button>
+  
+        </div>
+
+
       </form>
 	
     </div>
  
-     
-      <!-- CASE2 -->
-      <!-- 추가정보 입력 화면 -->
-     <!-- <div class="form_area">
-        <p class="title">추가정보</p>
-        <form action="">-->
-          <!-- 별자리 입력 -->
-         <!-- <div class="form_group_2">
-            <label class="sub_title" for="zodiacType" style ="font-size:30px;">나의 별자리는?</label>
-            <select name="zodiacType" id="zodiac" class ="select">
-              <option value="null">선택안함</option>
-              <option value="aries">양자리</option>
-              <option value="taurus">황소자리</option>
-              <option value="gemini">쌍둥이자리</option>
-              <option value="cancer">게자리</option>
-              <option value="leo">사자자리</option>
-              <option value="virgo">처녀자리</option>
-              <option value="libra">천칭자리</option>
-              <option value="scorpio">전갈자리</option>
-              <option value="sagittarius">궁수자리</option>
-              <option value="capricorn">염소자리</option>
-              <option value="aquarius">물병자리</option>
-              <option value="pisces">물고기자리</option>
-            </select>
-          </div> -->
-
-          <!-- MBTI 입력 -->
-         <!-- <div class="form_group_2">
-            <label class="sub_title" for="MBTI" style ="font-size:30px;">나의 MBTI는?</label>
-            <select name="MBTI" id="mbti" class ="select">
-              <option value="null">선택안함</option>
-              <option value="istj">ISTJ</option>
-              <option value="intj">INTJ</option>
-              <option value="estj">ESTJ</option>
-              <option value="entj">ENTJ</option>
-              <option value="istp">ISTP</option>
-              <option value="intp">INTP</option>
-              <option value="estp">ESTP</option>
-              <option value="entp">ENTP</option>
-              <option value="isfj">ISFJ</option>
-              <option value="infj">INFJ</option>
-              <option value="esfj">ESFJ</option>
-              <option value="enfj">ENFJ</option>
-              <option value="isfp">ISFP</option>
-              <option value="infp">INFP</option>
-              <option value="esfp">ESFP</option>
-              <option value="enfp">ENFP</option>
-            </select>
-          </div> -->
-
-          <!-- 혈액형 입력 -->
-          <!--<div class="form_group_ABO">
-            <label class="sub_title" for="bloodType" style ="font-size:30px;">나의 혈액형은?</label>
-              <div class="Radio">
-                <input value = "A" type="radio" name="bloodType" id="radioA" />
-                <label for="radioA">A형</label>
-              </div>
-              <div class="Radio">
-                <input value = "B" type="radio" name="bloodType" id="radioB"/>
-                <label for="radioB">B형</label>
-              </div>
-                <div class="Radio">
-                <input value = "AB" type="radio" name="bloodType" id="radioAB" />
-                <label for="radioAB">AB형</label>
-              </div>
-                <div class="Radio">
-                <input value = "O" type="radio" name="bloodType" id="radioO"/>
-                <label for="radioO"> O형</label>
-              </div>
-          </div> -->
-
-          <!-- 회원가입버튼 -->
-          <br><br>
-          <button class = "welcome">
-            <span class="text">Welcome!</span>
-          </button>
-        </form>
-
-      </div>
-
-
-
 
     </div>
     </div>
@@ -194,17 +190,6 @@
 
   </div>
 
-      <!-- mBody -->
-      <div id="mBody"></div>
-
-      <!-- mFoot -->
-      <div id="mFoot"></div>
-
-    </div>
-
-  </div>
-
-  </div>
 
 </body>
 
